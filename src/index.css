@@ -1,0 +1,36 @@
+@font-face {
+    font-family: moderniz;
+    src: url(fonts/Moderniz/Moderniz.woff2);
+}
+
+@font-face {
+  font-family:Nohemi-Bold;
+  src: url(fonts/Nohemi/Nohemi-Bold.woff2);
+}
+
+@font-face {
+  font-family:Nohemi-Medium;
+  src: url(fonts/Nohemi/Nohemi-Medium.woff2);
+}
+
+@font-face {
+  font-family:Nohemi-SemiBold;
+  src: url(fonts/Nohemi/Nohemi-SemiBold.woff2);
+}
+
+@font-face {
+  font-family:Nohemi-Regular;
+  src: url(fonts/Nohemi/Nohemi-Regular.woff2);
+}
+
+
+:root {
+    --primary-color: #E52121;
+    --secondary-color: #0A0A0B;
+    --neutral-color: #dcdcdc;
+  }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
