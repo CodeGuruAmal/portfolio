@@ -74,7 +74,7 @@ const Loader = () => {
 
   // Code for Overlay
 
-  const overlay = Array(8).fill();
+  const overlay = Array(11).fill();
 
   // Code for Enter Button Click
 
@@ -94,7 +94,7 @@ const Loader = () => {
       ease: "power3.inOut",
     });
 
-    gsap.from(".enter-marquee", {
+    gsap.to(".enter-marquee", {
       opacity:0,
       display:"none",
       duration: 1
@@ -105,13 +105,13 @@ const Loader = () => {
     <>
       <div className="loader-section fixed w-full font-[moderniz] h-screen bg-neutral">
         <div className="loader-marquee w-full">
-          <div className="marquee -rotate-3 fixed top-4 -left-1 bg-primary p-2 flex">
+          <div className="marquee fixed top-4 -left-1 bg-primary p-2 flex">
             {marquee.map((_, index) => {
               return (
                 <h1
                   ref={(el) => addToRefs(marqueeRight, el)}
                   key={index}
-                  className="text-md md:text-xl toRight text-secondary  px-[1.5vw]"
+                  className="text-[3vw] md:text-[1.5vw] toRight text-secondary  px-[1.5vw]"
                 >
                   loading
                 </h1>
@@ -119,13 +119,13 @@ const Loader = () => {
             })}
           </div>
 
-          <div className="marquee rotate-3 fixed bottom-4 -left-1 bg-primary p-2 flex">
+          <div className="marquee fixed bottom-4 -left-1 bg-primary p-2 flex">
             {marquee.map((_, index) => {
               return (
                 <h1
                   key={index}
                   ref={(el) => addToRefs(marqueeLeft, el)}
-                  className="text-md md:text-xl toLeft text-secondary  px-[1.5vw]"
+                  className="text-[3vw] md:text-[1.5vw] toLeft text-secondary  px-[1.5vw]"
                 >
                   Loading
                 </h1>
@@ -135,7 +135,7 @@ const Loader = () => {
         </div>
 
         <div className="progress-timer flex w-full h-full justify-center items-center">
-          <h2 className="text-primary  text-[1.8rem] md:text-[2.3rem] lg:text-[2.7rem]">
+          <h2 className="text-primary text-[1.8rem] md:text-[2.3rem] lg:text-[2.7rem]">
             {progress}%
           </h2>
         </div>
@@ -146,7 +146,7 @@ const Loader = () => {
               <div
                 ref={(el) => addToRefs(curtainEffect, el)}
                 key={index}
-                className="overlay w-[17vw] h-screen bg-secondary"
+                className="overlay w-[13vw] md:w-[11.5vw] lg:w-[9.5vw] h-screen bg-secondary"
               ></div>
             );
           })}
@@ -181,13 +181,13 @@ const Loader = () => {
           </div>
 
           <div className="enter-marquee w-full hidden opacity-0">
-          <div className="marquee -rotate-3 fixed top-4 -left-1 bg-primary p-2 flex">
+          <div className="marquee fixed top-4 -left-1 bg-primary p-2 flex">
             {marquee.map((_, index) => {
               return (
                 <h1
                   ref={(el) => addToRefs(marqueeRight, el)}
                   key={index}
-                  className="text-md md:text-xl toRight text-secondary  px-[1.5vw] whitespace-nowrap"
+                  className="text-[3vw] md:text-[1.5vw] toRight text-secondary px-[1.5vw] whitespace-nowrap"
                 >
                   Click anywhere
                 </h1>
@@ -195,13 +195,13 @@ const Loader = () => {
             })}
           </div>
 
-          <div className="marquee rotate-3 fixed bottom-4 -left-1 bg-primary p-2 flex">
+          <div className="marquee fixed bottom-4 -left-1 bg-primary p-2 flex">
             {marquee.map((_, index) => {
               return (
                 <h1
                   key={index}
                   ref={(el) => addToRefs(marqueeLeft, el)}
-                  className="text-md md:text-xl toLeft text-secondary  px-[1.5vw] whitespace-nowrap"
+                  className="text-[3vw] md:text-[1.5vw] toLeft text-secondary px-[1.5vw] whitespace-nowrap"
                 >
                   click anywhere
                 </h1>
