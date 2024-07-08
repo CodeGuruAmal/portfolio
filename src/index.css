@@ -5,32 +5,36 @@
 
 @font-face {
   font-family:Nohemi-Bold;
-  src: url(fonts/Nohemi/Nohemi-Bold.woff2);
+  src: url(../public/fonts/Nohemi/Nohemi-Bold.woff2);
 }
 
 @font-face {
   font-family:Nohemi-Medium;
-  src: url(fonts/Nohemi/Nohemi-Medium.woff2);
+  src: url(../public/fonts/Nohemi/Nohemi-Medium.woff2);
 }
 
 @font-face {
   font-family:Nohemi-SemiBold;
-  src: url(fonts/Nohemi/Nohemi-SemiBold.woff2);
+  src: url(../public/fonts/Nohemi/Nohemi-SemiBold.woff2);
 }
 
 @font-face {
   font-family:Nohemi-Regular;
-  src: url(fonts/Nohemi/Nohemi-Regular.woff2);
+  src: url(../public/fonts/Nohemi/Nohemi-Regular.woff2);
 }
 
 
 :root {
-    --primary-color: #FF8500;
+    --primary-color: #E85624;
     --secondary-color: #0e0e0e;
-    --neutral-color: #dcdcdc;
+    --neutral-color: #C4C4C4;
   }
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+body {
+  background-color: var(--neutral-color);
+}
