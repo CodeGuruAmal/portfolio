@@ -75,13 +75,13 @@ const Loader = () => {
         className="loader-section fixed z-[99999] w-full font-[moderniz] h-screen"
       >
         <div className="loader-marquee w-full">
-          <div className="marquee fixed top-4 -left-1 bg-primary p-2 flex">
+          <div className="marquee fixed top-5 -left-1 bg-primary p-2 flex">
             {marquee.map((_, index) => {
               return (
                 <h1
                   ref={(el) => addToRefs(marqueeRight, el)}
                   key={index}
-                  className="text-[3vw] md:text-[1.5vw] toRight text-secondary  px-[1.5vw]"
+                  className="text-[2.6vw] md:text-[1.5vw] toRight text-secondary  px-[1.5vw]"
                 >
                   loading
                 </h1>
@@ -89,13 +89,13 @@ const Loader = () => {
             })}
           </div>
 
-          <div className="marquee fixed bottom-4 -left-1 bg-primary p-2 flex">
+          <div className="marquee fixed bottom-5 -left-1 bg-primary p-2 flex">
             {marquee.map((_, index) => {
               return (
                 <h1
                   key={index}
                   ref={(el) => addToRefs(marqueeLeft, el)}
-                  className="text-[3vw] md:text-[1.5vw] toLeft text-secondary  px-[1.5vw]"
+                  className="text-[2.6vw] md:text-[1.5vw] toLeft text-secondary  px-[1.5vw]"
                 >
                   Loading
                 </h1>
