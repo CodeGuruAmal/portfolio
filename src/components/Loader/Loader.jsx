@@ -34,7 +34,7 @@ const Loader = () => {
           });
 
           gsap.to(curtainEffect.current, {
-            duration: 1.7,
+            duration: 1.5,
             height: 0,
             stagger: { amount: 0.7 },
             ease: "power3.inOut",
