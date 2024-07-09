@@ -25,9 +25,9 @@
 
 
 :root {
-    --primary-color: #E85624;
+    --primary-color: #FF4D00;
     --secondary-color: #0e0e0e;
-    --neutral-color: #C4C4C4;
+    --neutral-color: #E8E3DA;
   }
 
 @tailwind base;
