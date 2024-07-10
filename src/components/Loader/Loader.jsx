@@ -82,7 +82,7 @@ const Loader = () => {
     <>
       <div
         ref={(el) => addToRefs(loaderSection, el)}
-        className="loader-section fixed z-[99999] w-full font-[moderniz] h-screen"
+        className="loader-section fixed z-[99999] w-full font-[moderniz]"
       >
         <div className="loader-marquee w-full">
           <div className="marquee fixed top-5 -left-1 bg-primary p-2 flex">
@@ -114,20 +114,20 @@ const Loader = () => {
           </div>
         </div>
 
-        <div className="progress-timer flex w-full h-full justify-center items-center">
+        <div className="progress-timer flex w-full h-screen justify-center items-center">
           <h2 className="text-primary text-[1.5rem] md:text-[2rem] lg:text-[2.5rem]">
             {progress}%
           </h2>
         </div>
 
-        <div className="h-screen">
+        <div className="w-screen h-screen">
           <div
             ref={(el) => addToRefs(overlayRight, el)}
-            className="overlay1  w-screen h-[50%] bg-secondary fixed -z-10 top-0"
+            className="overlay1  w-full h-[50%] bg-secondary fixed -z-10 top-0"
           ></div>
           <div
             ref={(el) => addToRefs(overlayLeft, el)}
-            className="overlay2  w-screen h-[50%] bg-secondary fixed -z-10 bottom-0"
+            className="overlay2  w-full h-[50%] bg-secondary fixed -z-10 bottom-0"
           ></div>
         </div>
       </div>
