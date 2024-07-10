@@ -8,19 +8,28 @@ const Navbar = () => {
 
   useEffect(() => {
     if (progress === 100) {
-      gsap.from("h1", {
-        y: 100,
-        opacity: 0,
-        duration: 1,
-        delay: 2,
-      });
+     
     }
   }, [progress]);
 
   return (
-    <div>
-      <h1 className="text-primary text-[17vw] font-[Nohemi-Bold]">Hello</h1>
-    </div>
+    <>
+      <div className="navbar flex justify-between">
+        <div className="logo">
+          <h1>AMAL</h1>
+        </div>
+        <div className="menu flex gap-6">
+          <span><a href="#">About</a></span>
+          <span><a href="#">Works</a></span>
+          <span><a href="#">Services</a></span>
+          <button>Get in Touch</button>
+        </div>
+
+        <div>
+          <h1>AVAILABLE FOR WORK JULY 2024</h1>
+        </div>
+      </div>
+    </>
   );
 };
 
