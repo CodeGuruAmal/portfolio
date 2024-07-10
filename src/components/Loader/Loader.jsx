@@ -92,7 +92,7 @@ const Loader = () => {
                 <h1
                   ref={(el) => addToRefs(marqueeRight, el)}
                   key={index}
-                  className="text-[2.6vw] md:text-[1.5vw] toRight text-secondary  px-[1.5vw]"
+                  className="text-[2.6vw] md:text-[1.2vw] toRight text-secondary  px-[1.5vw]"
                 >
                   loading
                 </h1>
@@ -106,7 +106,7 @@ const Loader = () => {
                 <h1
                   key={index}
                   ref={(el) => addToRefs(marqueeLeft, el)}
-                  className="text-[2.6vw] md:text-[1.5vw] toLeft text-secondary  px-[1.5vw]"
+                  className="text-[2.6vw] md:text-[1.2vw] toLeft text-secondary  px-[1.5vw]"
                 >
                   Loading
                 </h1>
