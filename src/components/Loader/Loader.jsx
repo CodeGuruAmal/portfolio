@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useLoaderContext } from "../../context/LoaderContext";
@@ -8,7 +8,9 @@ const Loader = () => {
   const marquee = Array(12).fill();
 
   // Code for Refs
-  const curtainEffect = useRef([]);
+
+  const overlayRight = useRef([]);
+  const overlayLeft = useRef([]);
   const marqueeRight = useRef([]);
   const marqueeLeft = useRef([]);
   const loaderSection = useRef([]);
@@ -20,8 +22,7 @@ const Loader = () => {
   };
 
   // Code for Progress
-  const [ progress, setProgress ] = useLoaderContext();
-
+  const [progress, setProgress] = useLoaderContext();
   useEffect(() => {
     const interval = setInterval(() => {
       setProgress((prev) => {
@@ -34,10 +35,22 @@ const Loader = () => {
             duration: 0.5,
           });
 
-          gsap.to(curtainEffect.current, {
+          // gsap.to(curtainEffect.current, {
+          //   duration: 1.5,
+          //   height: 0,
+          //   stagger: { amount: 0.7 },
+          //   ease: "power3.inOut",
+          // });
+
+          gsap.to(overlayLeft.current, {
+            xPercent: -100,
             duration: 1.5,
-            height: 0,
-            stagger: { amount: 0.7 },
+            ease: "power3.inOut",
+          });
+
+          gsap.to(overlayRight.current, {
+            xPercent: 100,
+            duration: 1.5,
             ease: "power3.inOut",
           });
 
@@ -47,7 +60,7 @@ const Loader = () => {
         }
       });
     }, 30);
-  }, [setProgress]);
+  }, []);
 
   useGSAP(() => {
     gsap.from(marqueeRight.current, {
@@ -65,56 +78,61 @@ const Loader = () => {
     });
   });
 
-  // Code for Overlay
-  const overlay = Array(11).fill();
 
   return (
-    <div
-      ref={(el) => addToRefs(loaderSection, el)}
-      className="loader-section fixed z-[99999] w-full font-[moderniz] h-screen"
-    >
-      <div className="loader-marquee w-full">
-        <div className="marquee fixed top-5 -left-1 bg-primary p-2 flex">
-          {marquee.map((_, index) => (
-            <h1
-              ref={(el) => addToRefs(marqueeRight, el)}
-              key={index}
-              className="text-[2.6vw] md:text-[1.5vw] toRight text-secondary px-[1.5vw]"
-            >
-              loading
-            </h1>
-          ))}
+    <>
+      <div
+        ref={(el) => addToRefs(loaderSection, el)}
+        className="loader-section fixed z-[99999] w-full font-[moderniz] h-screen"
+      >
+        <div className="loader-marquee w-full">
+          <div className="marquee fixed top-5 -left-1 bg-primary p-2 flex">
+            {marquee.map((_, index) => {
+              return (
+                <h1
+                  ref={(el) => addToRefs(marqueeRight, el)}
+                  key={index}
+                  className="text-[2.6vw] md:text-[1.5vw] toRight text-secondary  px-[1.5vw]"
+                >
+                  loading
+                </h1>
+              );
+            })}
+          </div>
+
+          <div className="marquee fixed bottom-5 -left-1 bg-primary p-2 flex">
+            {marquee.map((_, index) => {
+              return (
+                <h1
+                  key={index}
+                  ref={(el) => addToRefs(marqueeLeft, el)}
+                  className="text-[2.6vw] md:text-[1.5vw] toLeft text-secondary  px-[1.5vw]"
+                >
+                  Loading
+                </h1>
+              );
+            })}
+          </div>
         </div>
 
-        <div className="marquee fixed bottom-5 -left-1 bg-primary p-2 flex">
-          {marquee.map((_, index) => (
-            <h1
-              key={index}
-              ref={(el) => addToRefs(marqueeLeft, el)}
-              className="text-[2.6vw] md:text-[1.5vw] toLeft text-secondary px-[1.5vw]"
-            >
-              Loading
-            </h1>
-          ))}
+        <div className="progress-timer flex w-full h-full justify-center items-center">
+          <h2 className="text-primary text-[1.5rem] md:text-[2rem] lg:text-[2.5rem]">
+            {progress}%
+          </h2>
         </div>
-      </div>
 
-      <div className="progress-timer flex w-full h-full justify-center items-center">
-        <h2 className="text-primary text-[1.5rem] md:text-[2rem] lg:text-[2.5rem]">
-          {progress}%
-        </h2>
-      </div>
-
-      <div className="overlay-container fixed -z-10 top-0 flex">
-        {overlay.map((_, index) => (
+        <div className="ovelay-container fixed top-0 -z-10">
           <div
-            ref={(el) => addToRefs(curtainEffect, el)}
-            key={index}
-            className="overlay w-[13vw] md:w-[11.5vw] lg:w-[9.5vw] h-screen bg-secondary"
+            ref={(el) => addToRefs(overlayLeft, el)}
+            className="overlay1  w-screen h-[25vw] bg-secondary"
           ></div>
-        ))}
+          <div
+            ref={(el) => addToRefs(overlayRight, el)}
+            className="overlay2  w-screen h-[26vw] bg-secondary"
+          ></div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
