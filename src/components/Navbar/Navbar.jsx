@@ -4,13 +4,22 @@ import { useGSAP } from "@gsap/react";
 import { useLoaderContext } from "../../context/LoaderContext";
 
 const Navbar = () => {
-  const [progress] = useLoaderContext();
+const [progress] = useLoaderContext();
 
-  useEffect(() => {
-    if (progress === 100) {
-     
-    }
-  }, [progress]);
+if(progress === 100) {
+  useGSAP(() => {
+    gsap.from(".navbar", {
+      opacity: 0,
+      y:-10,
+      duration: 1,
+      delay: 1,
+      ease: "power3.inOut",
+      stagger: {
+        amount: 1,
+      },
+    })
+  })
+}
 
   return (
     <>

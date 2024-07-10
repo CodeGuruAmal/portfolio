@@ -78,7 +78,6 @@ const Loader = () => {
     });
   });
 
-
   return (
     <>
       <div
@@ -121,14 +120,14 @@ const Loader = () => {
           </h2>
         </div>
 
-        <div className="ovelay-container fixed top-0 -z-10">
-          <div
-            ref={(el) => addToRefs(overlayLeft, el)}
-            className="overlay1  w-screen h-[25vw] bg-secondary"
-          ></div>
+        <div className="h-screen">
           <div
             ref={(el) => addToRefs(overlayRight, el)}
-            className="overlay2  w-screen h-[26vw] bg-secondary"
+            className="overlay1  w-screen h-[50%] bg-secondary fixed -z-10 top-0"
+          ></div>
+          <div
+            ref={(el) => addToRefs(overlayLeft, el)}
+            className="overlay2  w-screen h-[50%] bg-secondary fixed -z-10 bottom-0"
           ></div>
         </div>
       </div>
