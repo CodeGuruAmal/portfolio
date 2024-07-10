@@ -120,7 +120,7 @@ const Loader = () => {
           </h2>
         </div>
 
-        <div className="w-screen h-screen">
+        <div className="w-screen h-[90vw]">
           <div
             ref={(el) => addToRefs(overlayRight, el)}
             className="overlay1  w-full h-[50%] bg-secondary fixed -z-10 top-0"
