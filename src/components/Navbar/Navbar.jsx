@@ -27,16 +27,7 @@ if(progress === 100) {
         <div className="logo">
           <h1>AMAL</h1>
         </div>
-        <div className="menu flex gap-6">
-          <span><a href="#">About</a></span>
-          <span><a href="#">Works</a></span>
-          <span><a href="#">Services</a></span>
-          <button>Get in Touch</button>
-        </div>
-
-        <div>
-          <h1>AVAILABLE FOR WORK JULY 2024</h1>
-        </div>
+       
       </div>
     </>
   );
