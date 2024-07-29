@@ -3,7 +3,7 @@
   src: url(../public/fonts/Moderniz/Moderniz.woff2);
 }
 
-@font-face {
+/* @font-face {
   font-family: Nohemi-Bold;
   src: url(../public/fonts/Nohemi/Nohemi-Bold.woff2);
 }
@@ -27,8 +27,29 @@
 @font-face {
   font-family: Nohemi-Regular;
   src: url(../public/fonts/Nohemi/Nohemi-Regular.woff2);
-}
+} */
 
+
+@font-face {
+  font-family: Sloth-Regular;
+  src: url(../public//fonts/sloth/Sloth-Regular.ttf);
+}
+@font-face {
+  font-family: Sloth-SemiBold;
+  src: url(../public//fonts/sloth/Sloth-SemiBold.ttf);
+}
+@font-face {
+  font-family: Sloth-Bold;
+  src: url(../public//fonts/sloth/Sloth-Bold.ttf);
+}
+@font-face {
+  font-family: Sloth-Light;
+  src: url(../public//fonts/sloth/Sloth-Light.ttf);
+}
+@font-face {
+  font-family: Sloth-ExtraBold;
+  src: url(../public//fonts/sloth/Sloth-ExtraBold;.ttf);
+}
 
 :root {
   --primary-color: #FF4D00;

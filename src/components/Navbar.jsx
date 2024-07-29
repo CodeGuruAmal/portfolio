@@ -5,7 +5,7 @@ import { useLoaderContext } from "../context/LoaderContext";
 import { BsArrowUpRight } from "react-icons/bs";
 
 const Navbar = () => {
-  const marquee = Array(6).fill();
+  // const marquee = Array(6).fill();
 
   const [progress] = useLoaderContext();
 
@@ -24,7 +24,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="nav-container font-[Nohemi-Regular]">
+      <div className="nav-container font-[Sloth-Regular]">
         <div className="navbar-top flex justify-between p-4">
           <div className="logo">
             <img className="w-10" alt="" srcSet="./public/assets/logo.svg" />
@@ -36,7 +36,6 @@ const Navbar = () => {
             <h2>Based in India</h2>
             <h2 className="text-right">09:47 IST</h2>
           </div>
-          {/* <div className="color-box w-[10vw] h-[10vw] bg-green-600 sm:bg-red-600 md:bg-amber-500 lg:bg-sky-800"></div> */}
         </div>
 
         <div className="navbar-bottom flex justify-between items-center w-full p-4 absolute bottom-10">
