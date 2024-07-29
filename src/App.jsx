@@ -1,8 +1,8 @@
 import React from 'react'
-import Loader from './components/Loader/Loader'
-import Navbar from './components/Navbar/Navbar'
+import Loader from './components/Loader'
+import Navbar from './components/Navbar'
 import { LoaderProvider } from './context/LoaderContext'
-import Hero from './components/Hero/Hero';
+import Hero from './components/Hero';
 
 const App = () => {
   return (

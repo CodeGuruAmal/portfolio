@@ -1,40 +1,60 @@
 @font-face {
-    font-family: moderniz;
-    src: url(../public/fonts/Moderniz/Moderniz.woff2);
+  font-family: moderniz;
+  src: url(../public/fonts/Moderniz/Moderniz.woff2);
 }
 
 @font-face {
-  font-family:Nohemi-Bold;
+  font-family: Nohemi-Bold;
   src: url(../public/fonts/Nohemi/Nohemi-Bold.woff2);
 }
 
 @font-face {
-  font-family:Nohemi-Medium;
+  font-family: Nohemi-Medium;
   src: url(../public/fonts/Nohemi/Nohemi-Medium.woff2);
 }
 
 @font-face {
-  font-family:Nohemi-SemiBold;
+  font-family: Nohemi-Light;
+  src: url(../public/fonts/Nohemi/Nohemi-Light.woff2);
+}
+
+
+@font-face {
+  font-family: Nohemi-SemiBold;
   src: url(../public/fonts/Nohemi/Nohemi-SemiBold.woff2);
 }
 
 @font-face {
-  font-family:Nohemi-Regular;
+  font-family: Nohemi-Regular;
   src: url(../public/fonts/Nohemi/Nohemi-Regular.woff2);
 }
 
 
 :root {
-    --primary-color: #FF4D00;
-    --secondary-color: #0e0e0e;
-    --neutral-color: #E8E3DA;
-  }
+  --primary-color: #FF4D00;
+  --secondary-color: #0e0e0e;
+  --neutral-color: #E8E3DA;
+
+  --glass-filter: blur(4px) saturate(100%);
+  --glass-background: rgba(14, 14, 14, 0.04);
+  --glass-border: rgba(209, 213, 219, 0.3);
+}
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+::selection {
+  background-color: var(--primary-color);
+  color: var(--neutral-color);
+}
 
 body {
-  background-color: var(--neutral-color);
+  /* background-color: var(--neutral-color); */
+  /* height: 1000vh; */
+  background-image: url('../public/img/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
 }
+

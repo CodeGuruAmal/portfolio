@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { useLoaderContext } from "../../context/LoaderContext";
+import { useLoaderContext } from "../context/LoaderContext";
 
 const Loader = () => {
   // Code for Marquee
@@ -52,6 +52,10 @@ const Loader = () => {
             xPercent: 100,
             duration: 1.5,
             ease: "power3.inOut",
+          });
+
+          gsap.to(loaderSection.current, {
+            zIndex: -99999,
           });
 
           return prev;
