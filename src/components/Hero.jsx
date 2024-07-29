@@ -4,7 +4,9 @@ const Hero = () => {
 
   return (
     <>
-     
+     <section className="w-full h-screen absolute top-0 flex justify-center items-end">
+        
+     </section>
     </>
   );
 };

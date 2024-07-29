@@ -53,12 +53,12 @@
 
 :root {
   --primary-color: #FF4D00;
-  --secondary-color: #0e0e0e;
+  --secondary-color: #0a0a0a;
   --neutral-color: #E8E3DA;
 
-  --glass-filter: blur(4px) saturate(100%);
-  --glass-background: rgba(14, 14, 14, 0.04);
-  --glass-border: rgba(209, 213, 219, 0.3);
+  --glass-filter: blur(5px) saturate(100%);
+  --glass-background: #e8e3da56;
+  --glass-border: #d1d5db2a;
 }
 
 @tailwind base;
@@ -71,11 +71,11 @@
 }
 
 body {
-  /* background-color: var(--neutral-color); */
-  /* height: 1000vh; */
+  background-color: var(--neutral-color);
+  height: 1000vh;
   background-image: url('../public/img/bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-
+  cursor: default;
 }
 
