@@ -90,7 +90,7 @@
 body {
   background-color: var(--neutral-color);
   height: 1000vh;
-  /* background-image: url('../public/img/bg.jpg'); */
+  background-image: url('../public/assets/logo.svg');
   background-size: cover;
   background-repeat: no-repeat;
   cursor: default;
