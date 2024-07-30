@@ -41,7 +41,7 @@ const Navbar = () => {
   return (
     <>
       <div className="nav-container font-[Sloth-Regular]">
-        <div className="navbar-top w-full relative z-10 flex justify-between p-4">
+        <div className="navbar-top w-full relative z-10 flex justify-between items-center p-4">
           <div className="logo">
             <img className="w-8" alt="" srcSet="./public/assets/logo.svg" />
             {/* <h1 className="px-4 py-2 text-primary font-[Moderniz]">Amal</h1> */}
@@ -51,8 +51,8 @@ const Navbar = () => {
             <TbMenu />
           </div>
 
-          <div className="menu-link fixed left-1/2 -translate-x-1/2">
-            <nav className="flex items-center gap-5 rounded-md backdrop-glass-filter bg-glass-bg border-2 border-glass-border px-5 py-2">
+          <div className="menu-link fixed left-1/2 -translate-x-1/2 hidden sm:hidden lg:block">
+            <nav className="flex items-center gap-5 rounded-md backdrop-glass-filter bg-glass-bg  px-5 py-2">
               {menuLink.map((item, index) => {
                 return (
                   <a key={index} href={item.url} className="hover:text-primary">
