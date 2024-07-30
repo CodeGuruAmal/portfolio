@@ -54,11 +54,11 @@
 :root {
   --primary-color: #FF4D00;
   --secondary-color: #0a0a0a;
-  --neutral-color: #E8E3DA;
+  --neutral-color: #ECEBEB;
 
   --glass-filter: blur(5px) saturate(100%);
   --glass-background: #e8e3da56;
-  --glass-border: #d1d5db2a;
+  --glass-border: #bebfc13f;
 }
 
 @tailwind base;
@@ -70,10 +70,14 @@
   color: var(--neutral-color);
 }
 
+::-webkit-scrollbar-thumb {
+  background: #000;
+}
+
 body {
   background-color: var(--neutral-color);
   height: 1000vh;
-  background-image: url('../public/img/bg.jpg');
+  /* background-image: url('../public/img/bg.jpg'); */
   background-size: cover;
   background-repeat: no-repeat;
   cursor: default;

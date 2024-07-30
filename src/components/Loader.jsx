@@ -95,7 +95,7 @@ const Loader = () => {
                 <h1
                   ref={(el) => addToRefs(marqueeRight, el)}
                   key={index}
-                  className="text-[2.6vw] md:text-[1.2vw] toRight text-secondary  px-[1.5vw]"
+                  className="text-[2.8vw] md:text-[1.6vw] lg:text-[1.2vw] toRight text-secondary  px-[1.5vw]"
                 >
                   loading
                 </h1>
@@ -109,7 +109,7 @@ const Loader = () => {
                 <h1
                   key={index}
                   ref={(el) => addToRefs(marqueeLeft, el)}
-                  className="text-[2.6vw] md:text-[1.2vw] toLeft text-secondary  px-[1.5vw]"
+                  className="text-[2.8vw] md:text-[1.6vw] lg:text-[1.2vw] toLeft text-secondary  px-[1.5vw]"
                 >
                   Loading
                 </h1>
@@ -119,7 +119,7 @@ const Loader = () => {
         </div>
 
         <div className="progress-timer flex w-full h-screen justify-center items-center">
-          <h2 className="text-primary text-[1.5rem] md:text-[2rem] lg:text-[2.5rem]">
+          <h2 className="text-primary text-[1.8rem] md:text-[2rem] lg:text-[2.5rem]">
             {progress}%
           </h2>
         </div>
