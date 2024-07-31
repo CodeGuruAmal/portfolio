@@ -43,7 +43,6 @@ const Navbar = () => {
       <div className="nav-container font-[Sloth-Regular]">
         <div className="navbar-top w-full relative z-10 flex justify-between items-center p-4">
           <div className="logo">
-<<<<<<< HEAD
             <svg
               width="30"
               height="35"
@@ -101,9 +100,6 @@ const Navbar = () => {
               />
             </svg>
 
-=======
-            <img className="w-8" alt="" srcSet="./assets/site-logo.svg" />
->>>>>>> c89c8f1c2403fea99ea73505d5fd2c18ea48fea5
             {/* <h1 className="px-4 py-2 text-primary font-[Moderniz]">Amal</h1> */}
           </div>
 
